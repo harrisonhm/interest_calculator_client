@@ -4,7 +4,6 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/NavBar';
 import Dashboard from './pages/Dashboard';
-import History from './pages/History';
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
       <Container>
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          <Route path="history" element={<History />} />
         </Routes>
       </Container>
     </div>
