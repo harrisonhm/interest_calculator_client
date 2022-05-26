@@ -2,21 +2,12 @@ import React, { useState } from 'react';
 import InputAdornment from '@mui/material/InputAdornment';
 import { Button, Card, CardContent, TextField, Typography } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
-import { useDispatch } from 'react-redux';
-import { calculateInterest } from '../slices/interestCalculationSlice';
-import { Box } from '@mui/system';
 
-const InterestCalculationForm = () => {
-  const dispatch = useDispatch();
-
+const InterestCalculationForm = ({handleSubmit}) => {
   const [values, setValues] = useState({
-    total_amount: null,
-    percentage_interest: null
+    total_amount: '',
+    percentage_interest: ''
   })
-
-  const handleSubmit = () => {
-    dispatch(calculateInterest(values))
-  }
 
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
@@ -57,7 +48,7 @@ const InterestCalculationForm = () => {
             step: "0.1"
           }}
         />
-        <Button onClick={handleSubmit} variant="contained" endIcon={<SendIcon />}>
+        <Button onClick={() => handleSubmit(values)} variant="contained" endIcon={<SendIcon />}>
           <Typography sx={{ display: { xs: 'none', md: 'flex' }}}>Calculate</Typography>
         </Button>
       </CardContent>
