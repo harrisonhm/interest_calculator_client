@@ -5,11 +5,11 @@ To run:
 In separate terminals, run `npm run server`, followed by `npm start`
 
 Packages Used:
-Material UI
-Redux and Redux Toolkit
-Axios
-Redux-Saga (WIP)
-Robohydra
+- Material UI
+- Redux and Redux Toolkit
+- Axios
+- Redux-Saga (WIP)
+- Robohydra
 
 # Auto generated Readme
 
