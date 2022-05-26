@@ -15,7 +15,7 @@ const InterestCalculationTable = ({rows}) => (
           <TableRow>
             <TableCell>Time Calculated</TableCell>
             <TableCell align="right">Total Amount (£)</TableCell>
-            <TableCell align="right">Percentage Interest (%)</TableCell>
+            <TableCell align="right">Percentage(%)</TableCell>
             <TableCell align="right">Interest (£)</TableCell>
           </TableRow>
         </TableHead>
