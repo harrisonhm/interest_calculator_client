@@ -2,6 +2,7 @@ import { call, put, takeLatest } from 'redux-saga/effects'
 import Api from '../api'
 import { setHistory } from '../slices/interestCalculationSlice';
 
+// TODO: Fix Saga so that async logic can be separated from UI
 function* fetchInterestCalculationHistory() {
    try {
       console.log("Hello")
